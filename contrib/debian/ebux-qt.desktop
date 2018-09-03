@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=eBux
+Comment=eBux P2P Cryptocurrency
+Comment[fr]=eBux, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=eBux, eşten eşe kriptografik sanal para birimi
+Exec=ebux-qt %u
+Terminal=false
+Type=Application
+Icon=ebux128
+MimeType=x-scheme-handler/ebux;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+# /etc/conf.d/ebuxd: config file for /etc/init.d/ebuxd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/ebux/ebux.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/ebuxd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/ebuxd.pid"
+
+# Where to write ebuxd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/ebuxd"
+
+# User and group to own ebuxd process
+#BITCOIND_USER="ebux"
+#BITCOIND_GROUP="ebux"
+
+# Path to ebuxd executable
+#BITCOIND_BIN="/usr/bin/ebuxd"
+
+# Nice value to run ebuxd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

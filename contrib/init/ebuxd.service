@@ -1,0 +1,26 @@
+[Unit]
+Description=eBux's distributed currency daemon
+After=network.target
+
+[Service]
+User=ebux
+Group=ebux
+
+Type=forking
+PIDFile=/var/lib/ebuxd/ebuxd.pid
+
+ExecStart=/usr/bin/ebuxd -daemon -pid=/var/lib/ebuxd/ebuxd.pid \
+          -conf=/etc/ebux/ebux.conf -datadir=/var/lib/ebuxd
+
+ExecStop=-/usr/bin/ebux-cli -conf=/etc/ebux/ebux.conf \
+         -datadir=/var/lib/ebuxd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
