@@ -31,7 +31,7 @@ In the Console Debug window enter masternode outputs these are your MASTERNODE O
 
 Go to Tools -> Open Masternode Configuration File. Open the file in Notepad. Then paste:
 
-MN yourpublicip:16340 yourprivatekeygeneratedearlier txhash outputidx and replace yourpublicip, yourprivatekeygeneratedearlier, txhash and outputidx.
+MN yourpublicip:16340 yourprivatekeygeneratedearlier txhash outputidx and replace yourpublicip,, yourprivatekeygeneratedearlier, txhash and outputidx.
 
 It should look like:
 
