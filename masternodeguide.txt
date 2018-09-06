@@ -1,0 +1,58 @@
+Windows Linux Mac Masternode Setup Guide
+
+
+Static public IP and open Firewall ports are essential to run masternode!
+
+Run the eBux wallet and let it fully sync.
+
+Go to Tools -> Debug Console.
+
+In the Console window enter getaccountaddress MN and copy the result.
+
+This is your MASTERNODE DEPOSIT ADDRESS, where you will deposit MN Collateral to create a masternode.
+
+Send MN Collateral exactly to this address. No more, no less.
+
+
+In the Console Debug window enter masternode genkey - this is your MASTERNODE PRIVKEY.
+
+Go to Tools -> Open Wallet Configuration File. Open the file in Notepad. Then paste in the following two lines.
+
+masternode=1
+
+masternodeprivkey=
+
+Paste your privkey generated in debug console after the equals sign of masternodeprivkey= to make it looks like masternodeprivkey=88TqnWpr53JfkxubvZtQZNkFVWpZ5KHewHNtXzQNwh1pzMpt84t .
+
+Now save and close the file.
+
+
+In the Console Debug window enter masternode outputs these are your MASTERNODE OUTPUT txhash and outputidx.
+
+Go to Tools -> Open Masternode Configuration File. Open the file in Notepad. Then paste:
+
+MN yourpublicip:16340 yourprivatekeygeneratedearlier txhash outputidx and replace yourpublicip, yourprivatekeygeneratedearlier, txhash and outputidx.
+
+It should look like:
+
+MN 40.214.115.106:16340 88TqnWpr53JfkxubvZtQZNkFVWpZ5KHewHNtXzQNwh1pzMpt84t 31e9733f33cc1e370957a6845bf013bd016c896907a9d6f7b97ee32c072ca182 0 .
+
+Now save and close the file.
+
+Close the wallet by going to File -> Exit.
+
+Open the eBux wallet again.
+
+Go to Masternodes tab, select masternode named MN and press Start.
+
+You should see the response:
+
+
+Alias: MN
+
+Successfully started masternode
+
+
+Congratulations, your masternode is now running.
+
+All masternodes need to be active for a certain amount of blocks before they are recognized by the network and eligible for rewards.
